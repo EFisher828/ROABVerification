@@ -129,11 +129,6 @@ for i in range(len(ideal_ua_station_ids)):
 #and the model data
 url = 'http://nomads.ncep.noaa.gov:80/dods/gfs_0p25_1hr/gfs'+mdate[0:8]+'/gfs_0p25_1hr_'+mdate[9:11]+'z'
 
-# Create new directory
-output_dir = str(mdate)
-mkdir_p(output_dir)
-mkdir_p(output_dir+'/GFS'
-)
 #Parse data using MetPy
 ds = xr.open_dataset(url)
 
@@ -194,11 +189,11 @@ leg.set_zorder(100)
 
 ax1.set_title(str(mdate)+' GFS vs '+str(verification_time)[0:16]+' RAOBs')
 ax1.set_extent((360-135,360-65,20,60))
-plt.savefig(output_dir+'/GFS_H5_CONUS_Verif_'+mdate+'.png')
+plt.savefig('output/GFS_H5_CONUS_Verif_'+mdate+'.png')
 ax1.set_extent((360-175,360-140,35,70))
-plt.savefig(output_dir+'/GFS_H5_AK_Verif_'+mdate+'.png')
+plt.savefig('output/GFS_H5_AK_Verif_'+mdate+'.png')
 ax1.set_extent((360-174,360-57,10,70))
-plt.savefig(output_dir+'/GFS_H5_NAM_Verif_'+mdate+'.png')
+plt.savefig('output/GFS_H5_NAM_Verif_'+mdate+'.png')
 
 ###########################################################
 
@@ -240,8 +235,8 @@ leg.set_zorder(100)
 
 ax2.set_title(str(mdate)+' GFS vs '+str(verification_time)[0:16]+' RAOBs')
 ax2.set_extent((360-135,360-65,18,60))
-plt.savefig(output_dir+'/GFS_H5_CONUS_Verif__v1'+mdate+'.png')
+plt.savefig('output/GFS_H5_CONUS_Verif__v1'+mdate+'.png')
 ax2.set_extent((360-175,360-140,35,70))
-plt.savefig(output_dir+'/GFS_H5_AK_Verif__v1'+mdate+'.png')
+plt.savefig('output/GFS_H5_AK_Verif__v1'+mdate+'.png')
 ax2.set_extent((360-176,360-55,8,70))
-plt.savefig(output_dir+'/GFS_H5_NAM_Verif__v1'+mdate+'.png')
+plt.savefig('output/GFS_H5_NAM_Verif__v1'+mdate+'.png')
