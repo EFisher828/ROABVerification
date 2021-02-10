@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 import cartopy.crs as ccrs
@@ -6,6 +5,7 @@ import cartopy.feature as cfeature
 import matplotlib.pyplot as plt
 from netCDF4 import num2date
 import xarray as xr
+import numpy as np
 from siphon.catalog import TDSCatalog
 from datetime import datetime
 import datetime as dt
