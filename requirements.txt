@@ -1,4 +1,4 @@
-numpy==1.17.2
+NumPy==1.17.2
 absl-py==0.11.0
 appdirs==1.4.4
 apptools==5.1.0
